@@ -1,0 +1,13 @@
+.highlight {
+  background-color: #f8f8f8;
+  border: 1px solid black;
+
+  padding: 10px;
+  margin: 10px;
+
+  } .highlight pre {
+  font-family: 'Monaco', 'Anonymous Pro', 'Bitstream Vera Sans', Courier, mono;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0;
+}

@@ -2,11 +2,14 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/code.css">
     <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
     <title><%= title %></title>
   </head>
   <body>
+    <h1><a href="/"><%= title %></a></h1>
     <section>
       <%= yield %> 
     </section>
@@ -15,4 +18,3 @@
     </footer>
   </body>
 </html>
-

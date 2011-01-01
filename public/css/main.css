@@ -2,14 +2,22 @@ html { margin: 20px }
 body {
   margin: 0 auto;
   font-family: 'Baskerville', Georgia, Times, serif;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 30px;
   padding: 15px;
   width: 720px;
 
 }
+h1, h2, h3, h4 {
+  display: inline;
+  margin: 0;
+  font-weight: 600;
+}
 header, footer, section, article {
 	display: block;
+}
+section {
+  margin-top: 20px;
 }
 #content {
 }
@@ -36,6 +44,10 @@ a {
   color: #b83000;
 }
 h1 a {
+    color: black;
+    text-decoration: none;
+}
+h2 a {
   color: black;
   text-decoration: none;
 }
@@ -83,19 +95,8 @@ body > header {
 	line-height: 180px;
 	margin-bottom: 20px;
 }
-h1, h2, h3, h4 {
-  display: inline;
-  margin: 0;
-  font-weight: 600;
-}
 ul, li {
   list-style-type: none;
-}
-code {
-  font-family: 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
-}
-pre {
-  padding: 20px;
 }
 blockquote {
   font-style: italic;
