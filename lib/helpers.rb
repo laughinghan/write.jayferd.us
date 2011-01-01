@@ -6,14 +6,21 @@ module Helpers
 
       style, code = grab_style(code)
 
-      colorized = (
-        style ? Albino.new(code, style) : Albino.new(code)
-      ).colorize
+      colorized = pygments_api(code, style)
 
       pre.swap(colorized)
     end
 
     doc.to_html
+  end
+
+  PYGMENTS_API = 'http://pygments.appspot.com/'
+
+  def pygments_api(code, style=nil)
+    HTTParty.post(PYGMENTS_API, :body => {
+      :lang => style,
+      :code => code
+    })
   end
 
   def grab_style(code)

@@ -1,7 +1,7 @@
 
 require 'toto'
-require 'albino'
 require 'hpricot'
+require 'httparty'
 require File.join(File.dirname(__FILE__), 'lib', 'helpers')
 
 Toto::Site::Context.send(:include, Helpers)
