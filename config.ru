@@ -43,6 +43,8 @@ toto = Toto::Server.new do
     :delim => /^<!--\s*snip\s*-->/,
     :max => 1000
   }
+
+  set :disqus, 'writedown'
 end
 
 run toto
