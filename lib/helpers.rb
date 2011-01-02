@@ -1,4 +1,4 @@
-module Helpers
+module Colorize
   def colorize(body)
     doc = Hpricot(body)
     doc.search('pre').each do |pre|
