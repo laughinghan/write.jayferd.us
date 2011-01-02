@@ -16,10 +16,14 @@ module Helpers
 
   PYGMENTS_API = 'http://pygments.appspot.com/'
 
-  def pygments_api(code, style=nil)
+  def pygments_api(code, lang=nil)
+    return <<-html unless lang
+      <div class="highlight"><pre>#{code}</pre></div>
+    html
+
     HTTParty.post(PYGMENTS_API, :body => {
-      :lang => style,
-      :code => code
+      :code => code,
+      :lang => lang
     })
   end
 
