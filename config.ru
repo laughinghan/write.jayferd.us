@@ -38,6 +38,11 @@ toto = Toto::Server.new do
   set :ext, 'md'
 
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
+
+  set :summary, {
+    :delim => /^<!--\s*snip\s*-->/,
+    :max => 1000
+  }
 end
 
 run toto
