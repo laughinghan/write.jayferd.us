@@ -10,8 +10,11 @@
   </head>
   <body>
     <h1><a href="/"><%= @config[:title] %></a></h1>
+    <div id="by">by <%= @config[:author] %>
+      <a href="/about">[about me]</a>
+    </div>
     <section>
-      <%= yield %> 
+      <%= yield %>
     </section>
     <footer>
       powered by <a href="http://cloudhead.io/toto">toto</a>
