@@ -4,9 +4,9 @@ module Colorize
     doc.search('pre').each do |pre|
       code = pre.children[0].inner_text
 
-      style, code = grab_style(code)
+      lang, code = parse_lang(code)
 
-      colorized = pygments_api(code, style)
+      colorized = pygments_api(code, lang)
 
       pre.swap(colorized)
     end
@@ -27,9 +27,8 @@ module Colorize
     })
   end
 
-  def grab_style(code)
+  def parse_lang(code)
     return [nil, code] unless code.start_with? '@@'
-
 
     lines = code.split "\n"
 
