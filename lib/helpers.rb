@@ -2,7 +2,7 @@ module Colorize
   def colorize(body)
     doc = Hpricot(body)
     doc.search('pre').each do |pre|
-      code = pre.children[0].innerHTML
+      code = pre.children[0].inner_text
 
       style, code = grab_style(code)
 
