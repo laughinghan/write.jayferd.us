@@ -1,4 +1,7 @@
-html { margin: 20px }
+html { 
+  margin: 20px;
+  background-color: #f8f8f8;
+}
 body {
   margin: 0 auto;
   font-family: 'Baskerville', Georgia, Times, serif;
