@@ -31,7 +31,9 @@ The naive solution, then would be:
       read -n1 "$@"
     }
 
-    cat <<EOF | while getc ch; do echo "[$ch]"; done
+    while getc ch; do
+      echo "[$ch]";
+    done <<EOF
     one
     two
     three
