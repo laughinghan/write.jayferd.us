@@ -33,7 +33,9 @@ module Colorize
         :lang => lang
       })
 
-      File.open(code_fpath, "w") { |f| f.puts rendered }
+      if File.writable? code_fpath
+        File.open(code_fpath, "w") { |f| f.puts rendered }
+      end
 
       rendered
     end
