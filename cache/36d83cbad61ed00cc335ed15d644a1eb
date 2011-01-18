@@ -1,0 +1,13 @@
+<div class="highlight"><pre>getc<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">read</span> -n1 <span class="s2">&quot;$@&quot;</span>
+<span class="o">}</span>
+
+<span class="k">while </span>getc ch; <span class="k">do</span>
+<span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;[$ch]&quot;</span>;
+<span class="k">done</span> <span class="s">&lt;&lt;EOF</span>
+<span class="s">one</span>
+<span class="s">two</span>
+<span class="s">three</span>
+<span class="s">four</span>
+<span class="s">EOF</span>
+</pre></div>

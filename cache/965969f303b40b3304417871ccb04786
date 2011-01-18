@@ -1,0 +1,40 @@
+<div class="highlight"><pre><span class="k">module</span> <span class="nn">Truth</span>
+  <span class="no">Configuration</span><span class="o">.</span><span class="n">cache</span><span class="p">(</span><span class="ss">:addressables</span><span class="p">)</span> <span class="k">do</span>
+    <span class="no">Index</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:name_key</span> <span class="o">=&gt;</span> <span class="ss">:address_str</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">module</span> <span class="nn">Addressable</span>
+    <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
+      <span class="k">def</span> <span class="nf">included</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
+        <span class="n">klass</span><span class="o">.</span><span class="n">class_eval</span> <span class="k">do</span>
+          <span class="n">key</span> <span class="ss">:address</span>
+
+          <span class="s2">&quot;an </span><span class="si">#{</span><span class="n">interpolated</span> <span class="ss">:string</span><span class="si">}</span><span class="s2">&quot;</span>
+          <span class="sx">%w(</span>
+<span class="sx">            one</span>
+<span class="sx">            two</span>
+<span class="sx">            three</span>
+<span class="sx">          )</span>
+
+          <span class="sb">`echo LOL`</span><span class="sr"></span>
+
+<span class="sr">          /a regular ex\wress(ion) </span><span class="si">#{</span><span class="n">int</span> <span class="ss">:erpolated</span><span class="si">}</span><span class="sr">/</span>
+        <span class="k">end</span>
+
+        <span class="n">klass</span><span class="o">.</span><span class="n">dsl_class</span><span class="o">.</span><span class="n">class_eval</span> <span class="k">do</span>
+          <span class="k">def</span> <span class="nf">address</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+            <span class="vi">@target</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="no">IP</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+          <span class="k">end</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="c1"># TODO: is there a way to make this cleaner?</span>
+    <span class="k">def</span> <span class="nf">on_change_address</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="kp">new</span><span class="p">)</span>
+      <span class="n">configuration</span><span class="o">.</span><span class="n">addressables</span><span class="o">.</span><span class="n">update_membership</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+
+      <span class="n">configuration</span><span class="o">.</span><span class="n">networks</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">net</span><span class="o">|</span>
+        <span class="n">net</span><span class="o">.</span><span class="n">addressables</span><span class="o">.</span><span class="n">update_membership</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span> <span class="k">do</span>
+          <span class="n">net</span><span class="o">.</span><span class="n">cidr</span><span class="o">.</span><span class="n">include?</span> <span class="kp">new</span>
+        <span class="k">end</span>
+</pre></div>

@@ -1,0 +1,7 @@
+<div class="highlight"><pre>getc<span class="o">()</span> <span class="o">{</span>
+  <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -d<span class="s2">&quot;$(echo -e &#39;\004&#39;)&quot;</span> -n1 <span class="s2">&quot;$@&quot;</span>
+<span class="o">}</span>
+
+getc ch
+<span class="nb">echo</span> <span class="s2">&quot;$ch&quot;</span> <span class="c"># don&#39;t forget to quote it!</span>
+</pre></div>
