@@ -1,0 +1,2 @@
+<div class="highlight"><pre><span class="nv">eof</span><span class="o">=</span><span class="s2">&quot;$(echo -e &#39;\004&#39;)&quot;</span>
+</pre></div>

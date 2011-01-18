@@ -1,0 +1,4 @@
+<div class="highlight"><pre>getc<span class="o">()</span> <span class="o">{</span>
+  <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -n1 <span class="s2">&quot;$@&quot;</span>
+<span class="o">}</span>
+</pre></div>
