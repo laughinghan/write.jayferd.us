@@ -1,3 +1,5 @@
+require 'digest'
+
 module Colorize
   def colorize(body)
     doc = Hpricot(body)
@@ -21,10 +23,20 @@ module Colorize
       <div class="highlight"><pre>#{code}</pre></div>
     html
 
-    HTTParty.post(PYGMENTS_API, :body => {
-      :code => code,
-      :lang => lang
-    })
+    code_fpath = "cache/#{Digest::MD5.hexdigest("#{lang}|#{code}")}"
+
+    if File.exists? code_fpath
+      File.read(code_fpath)
+    else
+      rendered = HTTParty.post(PYGMENTS_API, :body => {
+        :code => code,
+        :lang => lang
+      })
+
+      File.open(code_fpath, "w") { |f| f.puts rendered }
+
+      rendered
+    end
   end
 
   def parse_lang(code)
