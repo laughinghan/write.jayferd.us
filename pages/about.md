@@ -1,8 +1,9 @@
 ## About me
 
-I'm a [hacker][github], a systems engineer, a musician, and a student of nonviolence.
+I'm a [hacker][github], a systems engineer, a musician, and a student of nonviolence, currently working at [GoodGuide][].
 
 [github]: http://github.com/jayferd
+[GoodGuide]: http://goodguide.com/
 
 ## Code I've written
 * [iplogic](http://github.com/jayferd/iplogic),
@@ -21,7 +22,5 @@ I'm a [hacker][github], a systems engineer, a musician, and a student of nonviol
 ## Contact
 * email (humans only, please): `jjmadkisson AT gmail DOT com`
 * facebook: [http://facebook.com/jay.adkisson](http://facebook.com/jay.adkisson)
-
-I'm also [looking for work in the bay area][resume], so hit me up if you've got something interesting!
 
 [resume]: http://github.com/jayferd/resume#readme
