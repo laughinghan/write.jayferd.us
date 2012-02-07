@@ -2,7 +2,13 @@
 
 %html
   %head
-    %style(type="text/css")
-      = Pygments.css('code')
+    %link(rel="stylesheet" type="text/css" href="/css/application.css")
+    %link(rel="stylesheet" type="text/css" href="/css/code.css")
+    %script(type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+    %script(type="text/javascript" src="/js/application.js")
 
-  %body= yield
+  %body
+    #container
+      %section= yield
+      %nav
+        %a(href="/") Home

@@ -1,3 +1,5 @@
-%h1= @content[:title]
+%article
+  %h1
+    %a{href: @post.path}= @post[:title]
 
-~ @content.html
+  ~ @post.html

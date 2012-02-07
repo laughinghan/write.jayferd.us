@@ -1,2 +1,5 @@
 # ignore rvmrc
 .rvmrc
+
+# sass
+.sass-cache

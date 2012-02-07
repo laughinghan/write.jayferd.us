@@ -1,0 +1,9 @@
+- @posts.each do |post|
+  %article
+    %h1
+      %a{href: post.path}= post[:title]
+
+    - post.fold_split do |content, fold|
+      ~ content
+      .fold~ fold
+      %a.read-more{href: post.path} more &raquo;

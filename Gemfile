@@ -8,6 +8,8 @@ gem 'sinatra'
 gem 'wrappable'
 
 gem 'haml'
+gem 'sass'
+gem 'compass'
 
 group :development do
   gem 'unicorn'

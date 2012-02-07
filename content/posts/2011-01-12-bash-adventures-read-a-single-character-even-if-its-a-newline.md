@@ -14,6 +14,8 @@ getc ch
 echo "$ch" # don't forget to quote it!
 ```
 
+<!--fold-->
+
 ## the explanation
 
 So it turns out that it's pretty difficult to read exactly one character from a stream.
@@ -72,7 +74,8 @@ The output from this is:
 Wait, what happened to the newlines -- why are they returning empty characters?  Well, it turns out there are two things going on here.  Again from the manual:
 
 ```
-The characters in the value of the IFS variable are used to split the line into words.
+The characters in the value of the IFS variable are used to split the
+line into words.
 ```
 
 ...and the newline is in the IFS.  So let's zero out `IFS`:
@@ -96,7 +99,7 @@ getc() {
 }
 ```
 
-(NOTE: the space between the `-d` and the `''` is not optional.  This confused me the first time I was solving the problem, and I had suggested using the EOF character.  Not only that, I suggested obtaining an EOF with `"$(echo -e '\004')`.  The empty delimiter is a better way to solve this particular problem, and `$'\004'` is a better way to get an EOF character.)
+(NOTE: the space between the `-d` and the `''` is not optional.  This confused me the first time I was solving the problem, and I had suggested using the EOF character.  Not only that, I suggested obtaining an EOF with `"$(echo -e '\004')"`.  The empty delimiter is a better way to solve this particular problem, and `$'\004'` is a better way to get an EOF character.)
 
 Now we get a very different output:
 

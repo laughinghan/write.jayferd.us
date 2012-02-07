@@ -22,17 +22,27 @@ class Content
 
   wraps :file
 
+  VALID_EXTENSIONS = %w(
+    .md
+  )
+
   def self.find(key)
     paths = []
     ROOT.find do |path|
-      paths << path if path.path_without_ext(ROOT) == key
+      next unless VALID_EXTENSIONS.include?(path.extname)
+      next unless path.path_without_ext(ROOT) == key
+
+      paths << path
     end
 
     wrap(paths.first) if paths.any?
   end
 
   def self.ls(dir)
-    ROOT.join(dir).children.map &method(:wrap)
+    ROOT.join(dir).children.select do |c|
+BlagApp.logger.info("extname: #{c.extname}")
+      VALID_EXTENSIONS.include?(c.extname)
+    end.map &method(:wrap)
   end
 
   def initialize(fname)
@@ -40,7 +50,12 @@ class Content
   end
 
   def source
-    @source ||= file.open('r:UTF-8', &:read)
+    @source ||= begin
+      # god damn it
+      contents = file.open('r:UTF-8', &:read)
+      contents.encode!('UTF-8', 'UTF-8', :invalid => :replace)
+      contents
+    end
   end
 
   def content
@@ -59,6 +74,10 @@ class Content
     Renderer.html(content, format)
   end
 
+  def fold_split(&b)
+    html.split('<!--fold-->', 2).tap(&b)
+  end
+
   def format
     file.extname
   end
@@ -69,6 +88,10 @@ class Content
 
   def key
     @key ||= file.path_without_ext(ROOT)
+  end
+
+  def path
+    "/#{key}"
   end
 
   def render(context={})
@@ -101,7 +124,7 @@ module Renderer
     include Redcarpet::Render::SmartyPants
 
     def block_code(code, language)
-      "<code>#{highlight_code(code, language)}</code>"
+      highlight_code(code, language)
     end
 
   private
