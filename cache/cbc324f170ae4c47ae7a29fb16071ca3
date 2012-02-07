@@ -1,5 +1,0 @@
-<div class="highlight"><pre><span class="nv">foo</span><span class="o">=</span>BAR
-baz<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo </span>LOL <span class="c">#omg</span>
-<span class="o">}</span>
-</pre></div>

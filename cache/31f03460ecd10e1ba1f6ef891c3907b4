@@ -1,4 +1,0 @@
-<div class="highlight"><pre>getc<span class="o">()</span> <span class="o">{</span>
-  <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -n1 -d<span class="s2">&quot;$(echo -e &#39;\004&#39;)&quot;</span> <span class="s2">&quot;$@&quot;</span>
-<span class="o">}</span>
-</pre></div>
