@@ -8,7 +8,7 @@
     :javascript
       var disqus_shortname = 'writedown'
         , disqus_identifier = #{@post.key.to_json}
-        , disqus_url = window.location
+        , disqus_url = window.location.toString()
       ;
 
       /* * * DON'T EDIT BELOW THIS LINE * * */
