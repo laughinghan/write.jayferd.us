@@ -13,4 +13,5 @@ gem 'compass'
 
 group :development do
   gem 'unicorn'
+  gem 'heroku'
 end
