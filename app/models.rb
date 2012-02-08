@@ -41,7 +41,7 @@ class Content
   def self.ls(dir)
     ROOT.join(dir).children.select do |c|
       VALID_EXTENSIONS.include?(c.extname)
-    end.map &method(:wrap)
+    end.sort.reverse.map &method(:wrap)
   end
 
   def initialize(fname)
