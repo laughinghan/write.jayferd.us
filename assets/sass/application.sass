@@ -39,12 +39,22 @@ a
     float: left
     width: 200px
 
+nav
+  menu
+    +no-bullets
+    padding: 0
+
+    a
+      text-decoration: none
+      text-transform: lowercase
+      font-size: 17px
+
 article
   h1, h1 a
     color: $schrill
     text-transform: lowercase
     text-decoration: none
-    font-size: 17px
+    font-size: 22px
 
 
   // h1 a:visited
@@ -55,6 +65,7 @@ article
 
   h2
     color: $go-get-it
+    font-size: 15px
 
   .fold
     display: none

@@ -48,34 +48,53 @@ a:visited {
 }
 
 /* line 43, /home/jay/src/blag/assets/sass/application.sass */
+nav menu {
+  list-style: none;
+  padding: 0;
+}
+/* line 11, /home/jay/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.alpha.4/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
+nav menu li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 47, /home/jay/src/blag/assets/sass/application.sass */
+nav menu a {
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 17px;
+}
+
+/* line 53, /home/jay/src/blag/assets/sass/application.sass */
 article h1, article h1 a {
   color: #ffb000;
   text-transform: lowercase;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 22px;
 }
-/* line 53, /home/jay/src/blag/assets/sass/application.sass */
+/* line 63, /home/jay/src/blag/assets/sass/application.sass */
 article h1 {
   border-bottom: 1px solid #ffb000;
 }
-/* line 56, /home/jay/src/blag/assets/sass/application.sass */
+/* line 66, /home/jay/src/blag/assets/sass/application.sass */
 article h2 {
   color: #b2fd6d;
+  font-size: 15px;
 }
-/* line 59, /home/jay/src/blag/assets/sass/application.sass */
+/* line 70, /home/jay/src/blag/assets/sass/application.sass */
 article .fold {
   display: none;
 }
-/* line 62, /home/jay/src/blag/assets/sass/application.sass */
+/* line 73, /home/jay/src/blag/assets/sass/application.sass */
 article pre {
   padding: 15px;
 }
-/* line 65, /home/jay/src/blag/assets/sass/application.sass */
+/* line 76, /home/jay/src/blag/assets/sass/application.sass */
 article code {
   padding: 1px;
   padding-top: 0;
 }
-/* line 69, /home/jay/src/blag/assets/sass/application.sass */
+/* line 80, /home/jay/src/blag/assets/sass/application.sass */
 article pre, article code {
   font-family: "Ubuntu Mono", "Monaco", monospace;
   font-size: 14px;
