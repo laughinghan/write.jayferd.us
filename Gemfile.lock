@@ -16,6 +16,7 @@ GEM
       rest-client (~> 1.6.1)
       rubyzip
       term-ansicolor (~> 1.0.5)
+    json (1.6.4)
     kgio (2.7.2)
     launchy (2.0.5)
       addressable (~> 2.2.6)
@@ -53,6 +54,7 @@ DEPENDENCIES
   compass
   haml
   heroku
+  json
   pygments.rb
   redcarpet
   sass

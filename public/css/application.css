@@ -109,3 +109,12 @@ article pre, article code {
   background-color: #122b3b;
   line-height: 15px;
 }
+
+/* line 94, /home/jay/src/blag/assets/sass/application.sass */
+#comments {
+  color: black;
+}
+/* line 96, /home/jay/src/blag/assets/sass/application.sass */
+#comments a {
+  color: #122b3b;
+}
