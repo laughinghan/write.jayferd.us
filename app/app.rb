@@ -38,7 +38,7 @@ class BlagApp < Sinatra::Application
 
   get '/' do
     # NB: posts are in alphabetical order
-    @posts = Content.ls('posts').last(5)
+    @posts = Content.ls('posts').reverse.last(5)
     haml :index
   end
 
