@@ -7,6 +7,21 @@ class BlagApp < Sinatra::Application
     @logger ||= Logger.new('log/blag.log')
   end
 
+  helpers do
+    def description(arg=:absent)
+      return @description if arg == :absent
+
+      @description = arg
+    end
+
+    def title(arg=:absent)
+      @title ||= []
+      return @title if arg == :absent
+
+      @title << arg
+    end
+  end
+
   configure do
     set :root, ROOT
     set :views, ROOT.join('templates')

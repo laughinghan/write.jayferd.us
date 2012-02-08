@@ -1,3 +1,6 @@
+- title @post[:title]
+- description @post[:description] || @post[:title]
+
 %article
   = haml :'post/header', locals: { post: @post }
 

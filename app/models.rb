@@ -74,7 +74,9 @@ class Content
   end
 
   def fold_split(&b)
-    html.split('<!--fold-->', 2).tap(&b)
+    splut = html.split('<!--fold-->', 2)
+    splut.tap(&b) if b
+    splut
   end
 
   def format

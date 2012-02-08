@@ -7,6 +7,10 @@
     %script(type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js")
     %script(type="text/javascript" src="/js/application.js")
 
+    - title "Things I Remember to Write Down"
+    %title= title.join(' | ')
+    %meta{name: 'description', content: description}
+
   %body
     #container
       %section= yield

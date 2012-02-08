@@ -1,5 +1,7 @@
 ---
 title: "Bash adventures: read a single character, even if it's a newline"
+description:
+  How to read just one character from a stream without clobbering newlines in bash
 date: 12/01/2011
 ---
 
