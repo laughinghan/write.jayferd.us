@@ -22,7 +22,8 @@ class BlagApp < Sinatra::Application
   end
 
   get '/' do
-    @posts = Content.ls('posts')
+    # NB: posts are in alphabetical order
+    @posts = Content.ls('posts').last(5)
     haml :index
   end
 
@@ -32,8 +33,8 @@ class BlagApp < Sinatra::Application
   end
 
   get '/pages/:name' do |name|
-    @post = Content.find("pages/#{name}")
-    haml :post
+    @page = Content.find("pages/#{name}")
+    haml :page
   end
 
   get '/css/:name.css' do |name|

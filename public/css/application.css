@@ -65,36 +65,42 @@ nav menu a {
   font-size: 17px;
 }
 
-/* line 53, /home/jay/src/blag/assets/sass/application.sass */
+/* line 54, /home/jay/src/blag/assets/sass/application.sass */
+article header time {
+  color: #6c8b9f;
+  font-style: italic;
+  float: right;
+}
+/* line 59, /home/jay/src/blag/assets/sass/application.sass */
 article h1, article h1 a {
   color: #ffb000;
   text-transform: lowercase;
   text-decoration: none;
   font-size: 22px;
 }
-/* line 63, /home/jay/src/blag/assets/sass/application.sass */
+/* line 69, /home/jay/src/blag/assets/sass/application.sass */
 article h1 {
   border-bottom: 1px solid #ffb000;
 }
-/* line 66, /home/jay/src/blag/assets/sass/application.sass */
+/* line 72, /home/jay/src/blag/assets/sass/application.sass */
 article h2 {
   color: #b2fd6d;
   font-size: 15px;
 }
-/* line 70, /home/jay/src/blag/assets/sass/application.sass */
+/* line 76, /home/jay/src/blag/assets/sass/application.sass */
 article .fold {
   display: none;
 }
-/* line 73, /home/jay/src/blag/assets/sass/application.sass */
+/* line 79, /home/jay/src/blag/assets/sass/application.sass */
 article pre {
   padding: 15px;
 }
-/* line 76, /home/jay/src/blag/assets/sass/application.sass */
+/* line 82, /home/jay/src/blag/assets/sass/application.sass */
 article code {
   padding: 1px;
   padding-top: 0;
 }
-/* line 80, /home/jay/src/blag/assets/sass/application.sass */
+/* line 86, /home/jay/src/blag/assets/sass/application.sass */
 article pre, article code {
   font-family: "Ubuntu Mono", "Monaco", monospace;
   font-size: 14px;

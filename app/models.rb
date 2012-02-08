@@ -40,7 +40,6 @@ class Content
 
   def self.ls(dir)
     ROOT.join(dir).children.select do |c|
-BlagApp.logger.info("extname: #{c.extname}")
       VALID_EXTENSIONS.include?(c.extname)
     end.map &method(:wrap)
   end
