@@ -12,6 +12,6 @@ But then I thought about it some more, and realized that I was letting my ends j
 
 When you start to think like that, it becomes very easy to forget to think about *how* you're making a billion dollars, and *why* you're making a billion dollars.
 
-And so my opinion is, looking at all these Wall St. bankers and businesspeople who are exploiting people so they can rake in more and more money, is that that's how they started. Maybe a few of them just wanted to be rich and glamorous and didn't care who they steamrolled. But I like to think most of them just wanted to solve some problems in the world, and got so caught up in this spiral of greed that they forgot why they were making money in the first place.
+And looking at all these Wall St. bankers and businesspeople who are exploiting people so they can rake in more and more money, I have to wonder. Maybe a few of them just wanted to be rich and glamorous and didn't care who they steamrolled. But I like to think most of them just wanted to solve some problems in the world, and got so caught up in this spiral of greed that they forgot why they were making money in the first place.
 
 --Jay
