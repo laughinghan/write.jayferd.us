@@ -31,6 +31,11 @@ class BlagApp < Sinatra::Application
     haml :post
   end
 
+  get '/pages/:name' do |name|
+    @post = Content.find("pages/#{name}")
+    haml :post
+  end
+
   get '/css/:name.css' do |name|
     content_type "text/css", charset: 'utf-8'
 

@@ -11,4 +11,10 @@
     #container
       %section= yield
       %nav
-        %a(href="/") Home
+        %menu
+          %li
+            %a(href="/") Home
+          - Content.ls('pages').each do |page|
+            %li
+              %a{href:page.path}= page[:title]
+

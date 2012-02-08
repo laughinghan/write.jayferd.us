@@ -1,4 +1,6 @@
-## About me
+---
+title: About Me
+---
 
 I'm a [hacker][github], a systems engineer, a musician, and a student of nonviolence, currently working at [GoodGuide][].
 
