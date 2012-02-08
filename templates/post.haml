@@ -1,10 +1,4 @@
 %article
-  %header
-    %h1
-      %a{href: @post.path}= @post[:title]
-    %p
-      - published_at = Date.parse(@post[:date])
-      %time{itemprop:"datePublished", pubDate:published_at.to_s}
-        Published #{published_at.strftime('%b %-d, %Y')}
+  = haml :'post/header', locals: { post: @post }
 
   ~ @post.html

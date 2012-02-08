@@ -1,7 +1,6 @@
 - @posts.each do |post|
   %article
-    %h1
-      %a{href: post.path}= post[:title]
+    = haml :'post/header', locals: { post: post }
 
     - post.fold_split do |content, fold|
       ~ content
