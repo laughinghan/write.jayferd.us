@@ -25,6 +25,11 @@ a:visited {
   margin: 0 auto;
 }
 /* line 25, /home/jay/src/blag/assets/sass/application.sass */
+#container > h1, #container > h1 a {
+  color: #faf6e4;
+  text-decoration: none;
+}
+/* line 29, /home/jay/src/blag/assets/sass/application.sass */
 #container > section, #container > nav {
   padding: 20px;
   color: #faf6e4;
@@ -36,19 +41,19 @@ a:visited {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 34, /home/jay/src/blag/assets/sass/application.sass */
+/* line 38, /home/jay/src/blag/assets/sass/application.sass */
 #container > section {
   width: 600px;
   float: left;
   margin-right: 20px;
 }
-/* line 39, /home/jay/src/blag/assets/sass/application.sass */
+/* line 43, /home/jay/src/blag/assets/sass/application.sass */
 #container > nav {
   float: left;
   width: 200px;
 }
 
-/* line 44, /home/jay/src/blag/assets/sass/application.sass */
+/* line 48, /home/jay/src/blag/assets/sass/application.sass */
 nav menu {
   list-style: none;
   padding: 0;
@@ -59,49 +64,49 @@ nav menu li {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 48, /home/jay/src/blag/assets/sass/application.sass */
+/* line 52, /home/jay/src/blag/assets/sass/application.sass */
 nav menu a {
   text-decoration: none;
   text-transform: lowercase;
   font-size: 17px;
 }
 
-/* line 55, /home/jay/src/blag/assets/sass/application.sass */
+/* line 59, /home/jay/src/blag/assets/sass/application.sass */
 article header time {
   color: #6c8b9f;
   font-style: italic;
   float: right;
 }
-/* line 60, /home/jay/src/blag/assets/sass/application.sass */
+/* line 64, /home/jay/src/blag/assets/sass/application.sass */
 article h1, article h1 a {
   color: #ffb000;
   text-transform: lowercase;
   text-decoration: none;
   font-size: 22px;
 }
-/* line 70, /home/jay/src/blag/assets/sass/application.sass */
+/* line 74, /home/jay/src/blag/assets/sass/application.sass */
 article h1 {
   border-bottom: 1px solid #ffb000;
 }
-/* line 73, /home/jay/src/blag/assets/sass/application.sass */
+/* line 77, /home/jay/src/blag/assets/sass/application.sass */
 article h2 {
   color: #b2fd6d;
   font-size: 15px;
 }
-/* line 77, /home/jay/src/blag/assets/sass/application.sass */
+/* line 81, /home/jay/src/blag/assets/sass/application.sass */
 article .fold {
   display: none;
 }
-/* line 80, /home/jay/src/blag/assets/sass/application.sass */
+/* line 84, /home/jay/src/blag/assets/sass/application.sass */
 article pre {
   padding: 15px;
 }
-/* line 83, /home/jay/src/blag/assets/sass/application.sass */
+/* line 87, /home/jay/src/blag/assets/sass/application.sass */
 article code {
   padding: 1px;
   padding-top: 0;
 }
-/* line 87, /home/jay/src/blag/assets/sass/application.sass */
+/* line 91, /home/jay/src/blag/assets/sass/application.sass */
 article pre, article code {
   font-family: "Ubuntu Mono", "Monaco", monospace;
   font-size: 14px;
