@@ -7,5 +7,6 @@
 
     - post.fold_split do |content, fold|
       ~ content
-      .fold~ fold
-      %a.read-more{href: post.path} more &raquo;
+      - if fold.present?
+        .fold~ fold
+        %a.read-more{href: post.path} more &raquo;
