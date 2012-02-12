@@ -38,12 +38,12 @@ read $fh | split $_ "\n" | set lines $_
 
 Type that a couple of times.  See how much more natural that is?
 
---Jay
-
-P.S.  In the language I'm designing (more on that soon), I've optimized the flow a bit more.  The snippet above will probably look something like this:
+In the language I'm designing (more on that soon), I'm trying to optimize the flow even more.  So far I'm thinking something like this:
 
 ```
 read .fh
   | split . \n
   | set lines .
 ```
+
+--Jay
