@@ -17,6 +17,9 @@ Pathname.send(:include, PathnameExtension)
 
 class Content
   ROOT = Pathname.new(__FILE__).dirname.parent.join('content')
+  def self.root
+    ROOT
+  end
 
   include Wrappable
 
@@ -28,9 +31,9 @@ class Content
 
   def self.find(key)
     paths = []
-    ROOT.find do |path|
+    root.find do |path|
       next unless VALID_EXTENSIONS.include?(path.extname)
-      next unless path.path_without_ext(ROOT) == key
+      next unless path.path_without_ext(root) == key
 
       paths << path
     end
@@ -38,8 +41,8 @@ class Content
     wrap(paths.first) if paths.any?
   end
 
-  def self.ls(dir)
-    ROOT.join(dir).children.select do |c|
+  def self.ls(dir='')
+    root.join(dir).children.select do |c|
       VALID_EXTENSIONS.include?(c.extname)
     end.sort.reverse.map &method(:wrap)
   end
@@ -114,6 +117,23 @@ private
     else
       { metadata: {}, content: source }
     end
+  end
+end
+
+class BlogPost < Content
+  def self.root
+    super.join('posts')
+  end
+
+  def self.latest(count, offset=0)
+    range = offset..(count + offset)
+    ls[range]
+  end
+end
+
+class Page < Content
+  def self.root
+    super.join('pages')
   end
 end
 

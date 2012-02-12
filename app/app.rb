@@ -37,17 +37,17 @@ class BlagApp < Sinatra::Application
   end
 
   get '/' do
-    @posts = Content.ls('posts').last(5)
+    @posts = BlogPost.latest(5)
     haml :index
   end
 
   get '/posts/:name' do |name|
-    @post = Content.find("posts/#{name}")
+    @post = BlogPost.find(name)
     haml :post
   end
 
   get '/pages/:name' do |name|
-    @page = Content.find("pages/#{name}")
+    @page = Page.find(name)
     haml :page
   end
 
